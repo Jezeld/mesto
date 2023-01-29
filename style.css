@@ -1,0 +1,134 @@
+/* * {
+  outline: 1px solid red;
+} */
+
+.page {
+    max-width: 1280px;
+    height: 100vh;
+    margin: 0px auto;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #fff;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+.header {
+    display: flex;
+    margin: 45px auto 0px;
+    box-sizing: border-box;
+    max-width: 880px;
+    min-height: 74px;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+
+}
+
+.header__logo {
+    margin: 0px;
+    aspect-ratio: 4.3/1;
+    background-image: url("./images/logo.svg");
+    max-width: 142px;
+    width: 100%;
+    background-repeat: no-repeat;
+    align-items: flex-start;
+    background-size: contain;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 880px;
+    min-height: 120px;
+    margin: 40px auto 51px;
+}
+
+.profile__avatar {
+    background-image: url("./images/Avatar.jpg");
+    border-radius: 50%;
+    max-width: 120px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.profile__profile-info {
+     max-width: 336px;
+     display: flex;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     overflow: hidden;
+     flex-direction: column;
+}
+
+.profile__name-edit {
+    display: flex;
+    flex-direction: row;
+    max-width: 336px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.profile__about {
+    margin: 16px 0px 0px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.profile__name {
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0px;
+    max-width: 294px;
+    width: 100%;
+}
+
+.profile__edit-button {
+    background-image: url("./images/EditButton.svg");
+    min-width: 24px;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0px 0px 8px 18px;
+
+}
+.profie__add-button {
+    background-image: url("./images/Vector.svg");
+    min-width: 150px;
+    aspect-ratio: 3/1;
+    background-repeat: no-repeat;
+    border: 2px solid rgba(255, 255, 255, 1);
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 850px) {
+    .header {
+        min-height: 56px;
+    }
+
+    .header__logo {
+        margin-left: 27px;
+        max-width: 104px;
+
+    }
+}
