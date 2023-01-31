@@ -1,6 +1,6 @@
-/* * {
-  outline: 1px solid red;
-} */
+* {
+    outline: 1px solid red;
+}
 
 .page {
     max-width: 1280px;
@@ -39,12 +39,21 @@
 }
 
 .profile {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 880px;
     min-height: 120px;
     margin: 40px auto 51px;
+}
+
+.profile__profile {
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    min-width: 487px;
 }
 
 .profile__avatar {
@@ -58,12 +67,12 @@
 }
 
 .profile__profile-info {
-     max-width: 336px;
-     display: flex;
-     white-space: nowrap;
-     text-overflow: ellipsis;
-     overflow: hidden;
-     flex-direction: column;
+    max-width: 336px;
+    display: flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex-direction: column;
 }
 
 .profile__name-edit {
@@ -81,7 +90,9 @@
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
-
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .profile__name {
@@ -93,6 +104,9 @@
     margin: 0px;
     max-width: 294px;
     width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .profile__edit-button {
@@ -104,7 +118,9 @@
     margin: 0px 0px 8px 18px;
 
 }
+
 .profie__add-button {
+    box-sizing: border-box;
     background-image: url("./images/Vector.svg");
     min-width: 150px;
     aspect-ratio: 3/1;
@@ -121,7 +137,7 @@
 
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 700px) {
     .header {
         min-height: 56px;
     }
@@ -129,6 +145,49 @@
     .header__logo {
         margin-left: 27px;
         max-width: 104px;
+    }
 
+    .profile {
+        flex-direction: column;
+        margin: 42px auto 36px;
+        max-width: 282px;
+    }
+
+    .profile__profile {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .profile__profile-info {
+        align-items: center;
+
+    }
+
+    .profile__about {
+        margin: 6px 0px 0px;
+        font-size: 14px;
+        line-height: 16.94px;
+        text-align: center;
+    }
+
+    .profile__name {
+        font-size: 27px;
+        text-align: center;
+        line-height: 32px;
+    }
+
+    .profile__edit-button {
+        min-width: 18px;
+        margin: 0px 0px 5px 10px;
+    }
+
+    .profie__add-button {
+        min-width: 282px;
+        aspect-ratio: 141/25;
+        margin-top: 34px;
+    }
+
+    .profile__profile {
+        min-width: 282px;
     }
 }
