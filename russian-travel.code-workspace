@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "../russian-travel"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../dom-templates"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mesto",
+		"files.trimTrailingWhitespace": true
+	}
+}
