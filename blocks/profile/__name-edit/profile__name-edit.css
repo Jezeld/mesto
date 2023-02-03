@@ -1,0 +1,7 @@
+.profile__name-edit {
+    display: flex;
+    flex-direction: row;
+    max-width: 336px;
+    justify-content: space-between;
+    align-items: flex-end;
+}

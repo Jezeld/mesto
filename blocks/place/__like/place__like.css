@@ -1,0 +1,11 @@
+.place__like {
+    background-image: url("./../../../images/heart.svg");
+    min-width: 22px;
+    aspect-ratio: 1.16/1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
