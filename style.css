@@ -110,16 +110,19 @@
 }
 
 .profile__edit-button {
+    border: none;
     background-image: url("./images/EditButton.svg");
     min-width: 24px;
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
     background-size: contain;
     margin: 0px 0px 8px 18px;
-
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .profie__add-button {
+    border: none;
     box-sizing: border-box;
     background-image: url("./images/Vector.svg");
     min-width: 150px;
@@ -127,6 +130,8 @@
     background-repeat: no-repeat;
     border: 2px solid rgba(255, 255, 255, 1);
     background-position: center;
+    background-color: transparent;
+    cursor: pointer;
 }
 .places {
      max-width: 880px;
@@ -196,6 +201,94 @@ text-align: left;
 color: rgba(84, 84, 84, 1);
 margin: 0px;
 }
+.popup {
+    box-sizing: border-box;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    padding: 19px;
+}
+.popup__container {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 430px;
+    width: 100%;
+
+}
+.popup__close {
+    background-image: url("./images/Close\ Icon.svg");
+    width: 32px;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background-color: transparent;
+    border: none;
+}
+.popup__title {
+    color: #000000;
+font-size: 24px;
+font-weight: 900;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: left;
+margin: 0px 0px 24px;
+}
+.popup__form {
+    padding: 34px 36px 36px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.popup__form-fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.popup__input {
+    border: none;
+    display: block;
+    font-family: inherit;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+font-size: 14px;
+font-weight: 400;
+line-height: 17px;
+letter-spacing: 0em;
+text-align: left;
+margin-top: 27px;
+padding: 0px 0px 11px;
+}
+.popup__button {
+    width: 100%;
+    border: none;
+    background-color: #000000;
+border-radius: 2px;
+font-family: inherit;
+color: #fff;
+font-size: 18px;
+font-weight: 400;
+line-height: 22px;
+letter-spacing: 0em;
+text-align: center;
+margin-top: 45px;
+padding: 0px;
+min-height: 50px;
+}
+
 
 
 @media screen and (max-width: 881px) {
@@ -258,24 +351,6 @@ margin: 0px;
         align-items: center;
 
     }
-/*
-    .profile__about {
-        margin: 6px 0px 0px;
-        font-size: 14px;
-        line-height: 16.94px;
-        text-align: center;
-    }
-
-    .profile__name {
-        font-size: 27px;
-        text-align: center;
-        line-height: 32px;
-    }
-
-    .profile__edit-button {
-        min-width: 18px;
-        margin: 0px 0px 5px 10px;
-    } */
 
     .profie__add-button {
         min-width: 282px;
@@ -293,7 +368,29 @@ margin: 0px;
     .places {
         max-width: 282px;
     }
-
+    .popup__close {
+        width: 20px;
+        top: -36px;
+        right: 0px;
+}
+.popup__container {
+    max-width: 282px;
+}
+.popup__form {
+    padding: 25px 22px;
+}
+.popup__title {
+font-size: 18px;
+font-weight: 900;
+line-height: 22px;
+margin: 0px 0px 46px;
+}
+.popup__input {
+margin-top: 27px;
+padding: 0px 0px 11px;
+}
+.popup__button {
+    min-height: 46px;
 }
 @media screen and (max-width: 320px) {
     .footer {
