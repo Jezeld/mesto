@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mesto</title>
+    <title>Место</title>
     <link rel="stylesheet" href="./pages/index.css">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
 </head>
 
 <body class="page">
@@ -21,76 +20,76 @@
                 <div class="profile__profile-info">
                     <div class="profile__name-edit">
                         <h1 class="profile__name">Жак-Ив Кусто</h1>
-                        <button class="profile__edit-button profile__edit-button_type_about"></button>
+                        <button type="button" aria-label="Редактировать" class="profile__edit-button profile__edit-button_type_about"></button>
                     </div>
                     <p class="profile__about">Исследователь океана</p>
                 </div>
             </div>
-            <button class="profile__add-button"></button>
+            <button type="submit" aria-label="Редактировать место" class="profile__add-button"></button>
         </section>
-        <section class="places" aria-label="photo-grid">
+        <section class="places" aria-label="Фотосетка">
             <div class="place">
                 <img src="./images/Karachaevsk.jpg" alt="Карачаевск" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Карачаево-Черкесия</h2>
-                    <button class="place__like place__like_active"></button>
+                    <button type="button" class="place__like place__like_active"></button>
                 </div>
             </div>
             <div class="place">
                 <img src="./images/elbrus.jpg" alt="Эльбрус" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Гора Эльбрус</h2>
-                    <button class="place__like place__like_active"></button>
+                    <button type="button" class="place__like place__like_active"></button>
                 </div>
             </div>
             <div class="place">
                 <img src="./images/dombay.jpg" alt="Домбай" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Домбай</h2>
-                    <button class="place__like place__like_active"></button>
+                    <button type="button" class="place__like place__like_active"></button>
                 </div>
             </div>
             <div class="place">
                 <img src="./images/Japan.jpg" alt="Япония" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Япония</h2>
-                    <button class="place__like place__like_active"></button>
+                    <button type="button" class="place__like place__like_active"></button>
                 </div>
             </div>
             <div class="place">
                 <img src="./images/Australia.jpg" alt="Австралия" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Австралия</h2>
-                    <button class="place__like place__like_active"></button>
+                    <button type="button" class="place__like place__like_active"></button>
                 </div>
             </div>
             <div class="place">
                 <img src="./images/USA.jpg" alt="США" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Соединенные штаты</h2>
-                    <button class="place__like place__like_active"></button>
+                    <button type="button" class="place__like place__like_active"></button>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer" aria-label="bottom">
+    <footer class="footer" aria-label="Подвал">
         <p class="footer__copyright">&copy; 2020 Mesto of travel</p>
     </footer>
-    <section class="popup">
+    <div class="popup">
         <div class="popup__container">
-            <button class="popup__close"></button>
-            <form class="popup__form">
+            <button type="button" class="popup__close"></button>
+            <form name="nameform" class="popup__form">
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <fieldset class="popup__form-fieldset">
                     <input type="text" placeholder="Имя" value="tempName" name="name"
-                        class="popup__input popup__input-name">
-                    <input type="text" placeholder="О себе" value="tempAbout" name="name"
-                        class="popup__input popup__input-job">
+                        class="popup__input popup__input_information_name" required>
+                    <input type="text" placeholder="О себе" value="tempAbout" name="nameabout"
+                        class="popup__input popup__input_information_job" required>
                     <button class="popup__button" type="submit">Сохранить</button>
                 </fieldset>
             </form>
         </div>
-    </section>
+    </div>
     <script src="./sctipts/script.js"></script>
 </body>
 
