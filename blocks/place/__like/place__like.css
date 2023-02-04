@@ -9,3 +9,9 @@
     border: none;
     cursor: pointer;
 }
+.place__like:hover {
+    opacity: 0.6;
+}
+.place__like:active {
+    background-image: url("./../../../images/heartblack.svg");
+}
