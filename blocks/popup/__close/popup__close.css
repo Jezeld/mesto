@@ -1,5 +1,5 @@
 .popup__close {
-    background-image: url("./../../../images/Close\ Icon.svg");
+    background-image: url("./../../../images/CloseIcon.svg");
     width: 32px;
     aspect-ratio: 1/1;
     background-repeat: no-repeat;
@@ -12,13 +12,13 @@
     border: none;
     padding: 0;
 }
+.popup__close:hover {
+    opacity: 0.6;
+ }
 @media screen and (max-width: 635px) {
     .popup__close {
         width: 20px;
         top: -36px;
         right: 0px;
     }
-}
-.popup__close:hover {
-   opacity: 0.6;
 }

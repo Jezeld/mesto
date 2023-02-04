@@ -11,7 +11,7 @@ let profileAbout = document.querySelector('.profile__about');
 
 
 const toggleOpenPopup = () => {
-    popup.classList.toggle('popup__opened');
+    popup.classList.toggle('popup_opened');
 };
 
 const handleAboutButtonClick = () => {
@@ -20,19 +20,15 @@ const handleAboutButtonClick = () => {
     jobInput.value = profileAbout.textContent;
 };
 
-const handleCloseButtonClick = () => {
-    toggleOpenPopup();
-};
+// const handleCloseButtonClick = () => {
+//     toggleOpenPopup();
+// };
 
 const handleOverlyClick = (event) => {
     if (event.target === event.currentTarget) {
         toggleOpenPopup();
     }
 };
-
-aboutButton.addEventListener('click', handleAboutButtonClick);
-closeButton.addEventListener('click', handleCloseButtonClick);
-popup.addEventListener('click', handleOverlyClick);
 
 function handleFormSubmit(evt) {
     evt.preventDefault();
@@ -41,4 +37,7 @@ function handleFormSubmit(evt) {
     toggleOpenPopup();
 }
 
+aboutButton.addEventListener('click', handleAboutButtonClick);
+closeButton.addEventListener('click', toggleOpenPopup);
+popup.addEventListener('click', handleOverlyClick);
 formElement.addEventListener('submit', handleFormSubmit);
