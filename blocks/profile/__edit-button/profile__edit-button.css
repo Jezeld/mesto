@@ -9,13 +9,15 @@
     background-color: transparent;
     cursor: pointer;
     padding: 0;
-}
-@media screen and (max-width: 881px) {
-    .profile__edit-button {
-        min-width: 18px;
-        margin: 0px 0px 5px 10px;
-    }
+    z-index: 1;
 }
 .profile__edit-button:hover {
     opacity: 0.6;
 }
+@media screen and (max-width: 881px) {
+    .profile__edit-button {
+        min-width: 18px;
+        margin: 0px 21px 5px 10px;
+    }
+}
+
