@@ -17,9 +17,10 @@
 }
 @media screen and (max-width: 700px) {
     .profile__add-button {
-        background-image: url("./../../../images/Vector320.svg");
+        /* background-image: url("./../../../images/Vector320.svg"); */
         min-width: 282px;
         aspect-ratio: 141/25;
         margin-top: 34px;
+        background-size: 16px 16px;
     }
 }

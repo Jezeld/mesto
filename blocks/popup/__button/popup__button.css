@@ -14,13 +14,15 @@
     padding: 0px;
     min-height: 50px;
 }
+
+.popup__button:hover {
+    opacity: 0.8;
+}
+
 @media screen and (max-width: 635px) {
     .popup__button {
         min-height: 46px;
         line-height: 16.94px;
         font-size: 14px;
     }
-}
-.popup__button:hover {
-    opacity: 0.8;
 }
