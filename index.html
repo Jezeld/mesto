@@ -25,60 +25,54 @@
                     <p class="profile__about">Исследователь океана</p>
                 </div>
             </div>
-            <button type="button" aria-label="Редактировать место" class="profile__add-button"></button>
+            <button type="button" aria-label="Редактировать место" class="profile__add-button profile__add-button_type_add"></button>
         </section>
         <section class="places" aria-label="Фотосетка">
-            <div class="place">
-                <img src="./images/Karachaevsk.jpg" alt="Карачаевск" class="place__image">
-                <div class="place__name">
-                    <h2 class="place__title">Карачаево-Черкесия</h2>
-                    <button type="button" class="place__like place__like_black"></button>
-                </div>
-            </div>
-            <div class="place">
+
+            <!-- <article class="place">
                 <img src="./images/elbrus.jpg" alt="Эльбрус" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Гора Эльбрус</h2>
                     <button type="button" class="place__like place__like_black"></button>
                 </div>
-            </div>
-            <div class="place">
+            </article>
+            <article class="place">
                 <img src="./images/dombay.jpg" alt="Домбай" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Домбай</h2>
                     <button type="button" class="place__like place__like_black"></button>
                 </div>
-            </div>
-            <div class="place">
+            </article>
+            <article class="place">
                 <img src="./images/Japan.jpg" alt="Япония" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Япония</h2>
                     <button type="button" class="place__like place__like_black"></button>
                 </div>
-            </div>
-            <div class="place">
+            </article>
+            <article class="place">
                 <img src="./images/Australia.jpg" alt="Австралия" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Австралия</h2>
                     <button type="button" class="place__like place__like_black"></button>
                 </div>
-            </div>
-            <div class="place">
+            </article>
+            <article class="place">
                 <img src="./images/USA.jpg" alt="США" class="place__image">
                 <div class="place__name">
                     <h2 class="place__title">Соединенные штаты</h2>
                     <button type="button" class="place__like place__like_black"></button>
                 </div>
-            </div>
+            </article> -->
         </section>
     </main>
     <footer class="footer" aria-label="Подвал">
         <p class="footer__copyright">&copy; 2020 Mesto of travel</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup-edit">
         <div class="popup__container">
-            <button type="button" class="popup__close"></button>
-            <form name="nameform" class="popup__form">
+            <button type="button" class="popup__close" aria-label="Закрыть форму"></button>
+            <form name="nameform" class="popup__form popup__form_type_edit">
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <fieldset class="popup__form-fieldset">
                     <input type="text" placeholder="Имя" value="tempName" name="name"
@@ -90,6 +84,38 @@
             </form>
         </div>
     </div>
+    <div class="popup popup-add">
+        <div class="popup__container">
+            <button type="button" class="popup__close" aria-label="Закрыть форму добавления картинки"></button>
+            <form name="nameform" class="popup__form popup__form_type_add">
+                <h2 class="popup__title">Новое место</h2>
+                <fieldset class="popup__form-fieldset">
+                    <input type="text" placeholder="Название" value="Название" name="placetitle"
+                        class="popup__input popup__input_information_image" required>
+                    <input type="text" placeholder="Ссылка на картинку" value="Ссылка на картинку" name="placelink"
+                        class="popup__input popup__input_information_link" required>
+                    <button class="popup__button" type="submit">Создать</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="popup popup-image">
+        <div class="popup__container-img">
+            <button type="button" class="popup__close" aria-label="Закрыть картинку"></button>
+            <img src="/images/Australia.jpg" alt="" class="popup__img">
+            <h2 class="popup__heading">Название места</h2>
+        </div>
+    </div>
+    <template id="card">
+        <article class="place">
+            <button type="button" class="place__urn"></button>
+            <img src=" " alt="Тест" class="place__image">
+            <div class="place__name">
+                <h2 class="place__title">Тест</h2>
+                <button type="button" class="place__like"></button>
+            </div>
+        </article>
+    </template>
     <script src="./sctipts/script.js"></script>
 </body>
 
