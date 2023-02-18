@@ -1,7 +1,7 @@
 .popup__img {
-max-height: 75vh;
-max-width: 75vw;
-width: 100%;
-aspect-ratio: auto;
-object-fit: cover;
+    object-fit: cover;
+    max-height: 75vh;
+    max-width: 75vw;
+    width: 100%;
+    aspect-ratio: auto;
 }
