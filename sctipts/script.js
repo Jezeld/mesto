@@ -40,15 +40,14 @@ function handleEditProfileFormSubmit(event) {
     toggleOpenPopup(popupEditProfile );
 };
 
-const makeCard = (item) => {
+const createCard = (item) => {
     const card = templateCard.querySelector('.place').cloneNode(true);
     const cardImage = card.querySelector('.place__image');
     cardImage.src = item.link;
     cardImage.alt = item.name;
     const cardTitle = card.querySelector('.place__title');
     cardTitle.textContent = item.name;
-    const likeCard = card.querySelector('.place__like');
-    likeCard.addEventListener('click', function (event) {
+    card.querySelector('.place__like').addEventListener('click', function (event) {
         event.target.classList.toggle('place__like_active');
     });
     card.querySelector('.place__urn').addEventListener('click', function () {
@@ -64,7 +63,7 @@ const makeCard = (item) => {
 };
 
 const renderInitialCard = (x, item) => {
-    x.prepend(makeCard(item));
+    x.prepend(createCard(item));
 };
 
 initialCards.forEach((item) => {
