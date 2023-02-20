@@ -1,6 +1,5 @@
 
 const buttonEditProfile = document.querySelector('.profile__edit-button_type_about');
-const popupsAll = document.querySelectorAll('.popup');
 const formEditProfile = document.querySelector('.popup__form_type_edit'); // форма профайла
 const formAddCard = document.querySelector('.popup__form_type_add');// форма добавления карточек
 const nameInput = document.querySelector('.popup__input_information_name');
@@ -86,14 +85,6 @@ formAddCard.addEventListener('submit', (evt) => {
     linkImageInputUser.value = '';
     titleImageInputUser.value = '';
     toggleOpenPopup(popupAddCard);
-});
-
-popupsAll.forEach((overly) => {
-    overly.addEventListener('click', (event) => {
-        if (event.target === event.currentTarget) {
-            toggleOpenPopup(overly);
-        }
-    });
 });
 
 buttonEditProfile.addEventListener('click', handleButtonEditProfileClick);
