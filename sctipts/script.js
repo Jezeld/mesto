@@ -11,24 +11,24 @@ const templateCard = document.querySelector('#card').content;
 const popupImageBig = document.querySelector('.popup-image');   //  картинкa big
 const popupEditProfile  = document.querySelector('.popup-edit');   // профиль редактирования
 const popupAddCard = document.querySelector('.popup-add');  // добавления User
-const buttonsCloseProfile = document.querySelectorAll('.popup__close');
+const buttonsClosePopup = document.querySelectorAll('.popup__close');
 const buttonAddCard = document.querySelector('.profile__add-button_type_add');
 const titleImageInputUser = document.querySelector('.popup__input_information_image');
 const linkImageInputUser = document.querySelector('.popup__input_information_link');
 const picturePopupImageBig = document.querySelector('.popup__img');
-const HeadingPicturePopup = document.querySelector('.popup__heading');
+const headingPicturePopup = document.querySelector('.popup__heading');
 
-buttonsCloseProfile.forEach((button) => {
+buttonsClosePopup.forEach((button) => {
     const popupSelectiveClosing = button.closest('.popup');
-    button.addEventListener('click', () => toggleOpenPopup(popupSelectiveClosing));
+    button.addEventListener('click', () => togglePopup(popupSelectiveClosing));
 });
 
-const toggleOpenPopup = (popup) => {
+const togglePopup = (popup) => {
     popup.classList.toggle('popup_opened');
 };
 
 const handleButtonEditProfileClick = () => {
-    toggleOpenPopup(popupEditProfile );
+    togglePopup(popupEditProfile );
     nameInput.value = profileName.textContent;
     jobInput.value = profileAbout.textContent;
 };
@@ -37,7 +37,7 @@ function handleEditProfileFormSubmit(event) {
     event.preventDefault();
     profileName.textContent = nameInput.value;
     profileAbout.textContent = jobInput.value;
-    toggleOpenPopup(popupEditProfile );
+    togglePopup(popupEditProfile );
 };
 
 const createCard = (item) => {
@@ -56,14 +56,14 @@ const createCard = (item) => {
     cardImage.addEventListener('click', function () {
         picturePopupImageBig.src = item.link;
         picturePopupImageBig.alt = item.name;
-        HeadingPicturePopup.textContent = item.name;
-        toggleOpenPopup(popupImageBig);
+        headingPicturePopup.textContent = item.name;
+        togglePopup(popupImageBig);
     });
     return card;
 };
 
-const renderInitialCard = (x, item) => {
-    x.prepend(createCard(item));
+const renderInitialCard = (cardList, item) => {
+    cardList.prepend(createCard(item));
 };
 
 initialCards.forEach((item) => {
@@ -71,7 +71,7 @@ initialCards.forEach((item) => {
 });
 
 buttonAddCard.addEventListener('click', () => {
-    toggleOpenPopup(popupAddCard);
+    togglePopup(popupAddCard);
 });
 
 formAddCard.addEventListener('submit', (evt) => {
@@ -83,7 +83,7 @@ formAddCard.addEventListener('submit', (evt) => {
     renderInitialCard(placesAddCard, cardUser);
     linkImageInputUser.value = '';
     titleImageInputUser.value = '';
-    toggleOpenPopup(popupAddCard);
+    togglePopup(popupAddCard);
 });
 
 buttonEditProfile.addEventListener('click', handleButtonEditProfileClick);
