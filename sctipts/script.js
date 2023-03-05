@@ -1,7 +1,7 @@
 
 const buttonEditProfile = document.querySelector('.profile__edit-button_type_about');
-const formEditProfile = document.querySelector('.form-profile_type_edit'); // форма профайла
-const formAddCard = document.querySelector('.form-profile_type_add');// форма добавления карточек
+const formEditProfile = document.querySelector('.form-profile_edit'); // форма профайла
+const formAddCard = document.querySelector('.form-profile_add');// форма добавления карточек
 const nameInput = document.querySelector('.form__input_information_name');
 const jobInput = document.querySelector('.form__input_information_job');
 const profileName = document.querySelector('.profile__name');
