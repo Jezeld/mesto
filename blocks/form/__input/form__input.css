@@ -1,4 +1,4 @@
-.popup__input {
+.form__input {
     border: none;
     display: block;
     font-family: inherit;
@@ -9,15 +9,15 @@
     line-height: 17px;
     letter-spacing: 0em;
     text-align: left;
-    margin-top: 27px;
-    padding: 0px 0px 11px;
+    /* margin-top: 27px; */
+    padding: 0px 0px 9px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
 @media screen and (max-width: 635px) {
-    .popup__input {
-        margin-top: 27px;
+    .form__input {
+        /* margin-top: 27px; */
         padding: 0px 0px 11px;
     }
 }

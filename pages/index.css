@@ -26,14 +26,18 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__close/popup__close.css);
-@import url(../blocks/popup/__title/popup__title.css);
-@import url(../blocks/popup/__form/popup__form.css);
-@import url(../blocks/popup/__form-fieldset/popup__form-fieldset.css);
-@import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__heading/popup__heading.css);
 @import url(../blocks/popup/__container-img/popup__container-img.css);
 @import url(../blocks/popup/__img/popup__img.css);
-@import url(../blocks/popup/__button/popup__button.css);
+
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__button-submit/form__button-submit.css);
+@import url(../blocks/form/__fieldset/form__fieldset.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__title/form__title.css);
+@import url(../blocks/form/__span-error/form__span-error.css);
+@import url(../blocks/form/__input-error/form__input-error.css);
+@import url(../blocks/form/__button-submit/_disabled/form__button-submit_disabled.css);
 
 
 

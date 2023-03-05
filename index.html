@@ -36,14 +36,16 @@
     <div class="popup popup-edit">
         <div class="popup__container">
             <button type="button" class="popup__close" aria-label="Закрыть форму"></button>
-            <form name="nameform" class="popup__form popup__form_type_edit">
-                <h2 class="popup__title">Редактировать профиль</h2>
-                <fieldset class="popup__form-fieldset">
-                    <input type="text" placeholder="Имя" value="tempName" name="name"
-                        class="popup__input popup__input_information_name" required>
-                    <input type="text" placeholder="О себе" value="tempAbout" name="nameabout"
-                        class="popup__input popup__input_information_job" required>
-                    <button class="popup__button" type="submit">Сохранить</button>
+            <form class="form form-profile_type_edit" name="nameform" novalidate>
+                <h2 class="form__title">Редактировать профиль</h2>
+                <fieldset class="form__fieldset">
+                    <input id="name-input" type="text" placeholder="Имя" value="tempName" name="name"
+                        class="form__input form__input_information_name" minlength="2" maxlength="40" required>
+                        <span class="form__span-error name-input-error"></span>
+                    <input id="job-input" type="text" placeholder="О себе" value="tempAbout" name="nameabout"
+                        class="form__input form__input_information_job" minlength="2" maxlength="200" required>
+                        <span class="form__span-error job-input-error"></span>
+                    <button class="form__button-submit" type="submit">Сохранить</button>
                 </fieldset>
             </form>
         </div>
@@ -51,14 +53,16 @@
     <div class="popup popup-add">
         <div class="popup__container">
             <button type="button" class="popup__close" aria-label="Закрыть форму добавления картинки"></button>
-            <form name="nameform" class="popup__form popup__form_type_add">
-                <h2 class="popup__title">Новое место</h2>
-                <fieldset class="popup__form-fieldset">
-                    <input type="text" placeholder="Название" value="" name="placetitle"
-                        class="popup__input popup__input_information_image" required>
-                    <input type="text" placeholder="Ссылка на картинку" value="" name="placelink"
-                        class="popup__input popup__input_information_link" required>
-                    <button class="popup__button" type="submit">Создать</button>
+            <form class="form form-profile_type_add" name="nameform" novalidate>
+                <h2 class="form__title">Новое место</h2>
+                <fieldset class="form__fieldset">
+                    <input id="image-input" type="text" placeholder="Название" value="" name="placetitle"
+                        class="form__input form__input_information_image" minlength="2" maxlength="30" required>
+                        <span class="form__span-error image-input-error"></span>
+                    <input id="link-input" type="url" placeholder="Ссылка на картинку" value="" name="placelink"
+                        class="form__input form__input_information_link" required>
+                        <span class="form__span-error link-input-error"></span>
+                    <button class="form__button-submit" type="submit">Создать</button>
                 </fieldset>
             </form>
         </div>
@@ -82,6 +86,7 @@
     </template>
     <script src="./sctipts/constants.js"></script>
     <script src="./sctipts/script.js"></script>
+    <script src="./sctipts/validate.js"></script>
 </body>
 
 </html>
