@@ -85,7 +85,10 @@ const setEventListeners = (object, formElement) => {
   const buttonElement = formElement.querySelector(object.submitSelector);
   //Вызываем toggleButtonState, чтобы не ждать ввода данных в поля
   toggleButtonState(object, inputList, buttonElement);
-  // Обойдём все элементы полученной коллекции
+  formElement.addEventListener('reset', () => { // собыите `reset` происходит когда вызывается `reset` у формы
+    setTimeout(() => {  // добавим таймаут, чтобы `toggleButtonState` вызвался уже после сохранения формы
+      toggleButtonState(object, inputList, buttonElement), 0 });
+  });
   inputList.forEach((inputElement) => {
     // каждому полю добавим обработчик события input
     inputElement.addEventListener('input', () => {
@@ -95,10 +98,6 @@ const setEventListeners = (object, formElement) => {
       //Вызываем toggleButtonState и передача ей массива полей и кнопки
       toggleButtonState(object, inputList, buttonElement);
     });
-  });
-  formElement.addEventListener('reset', () => { // собыите `reset` происходит когда вызывается `reset` у формы
-    setTimeout(() => {  // добавим таймаут, чтобы `toggleButtonState` вызвался уже после сохранения формы
-      toggleButtonState(object, inputList, buttonElement), 0 });
   });
 };
 
