@@ -28,16 +28,15 @@ buttonsClosePopup.forEach((button) => {
 //     popup.classList.toggle('popup_opened');
 // };
 
-
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closeByEscape);
+    enableValidation(object);
+};
 
 function closePopup(popup) {
     popup.classList.remove('popup_opened');
     document.removeEventListener('keydown', closeByEscape);
-};
-
-function openPopup(popup) {
-    popup.classList.add('popup_opened');
-    document.addEventListener('keydown', closeByEscape);
 };
 
 function closeByEscape(evt) {

@@ -98,6 +98,8 @@ const setEventListeners = (object, formElement) => {
   });
 };
 
+
+
 // Переберем все формы на странице и добавим всем формам обработчик
 const enableValidation = (object) => {
   // Найдём все формы
