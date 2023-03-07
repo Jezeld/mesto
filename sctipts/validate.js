@@ -16,8 +16,8 @@ const showInputError = (object, formElement, inputElement, errorMessage) => {
   // находим элемент ошибки внутри самой функции
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add(object.inputErrorClass);
-  errorElement.textContent = errorMessage; // Показываем сообщение об ошибке
-  errorElement.classList.add(object.errorClass); // Замена содержимого span с ошибкой на переданный параметр
+  errorElement.textContent = errorMessage; // Замена содержимого span с ошибкой на переданный параметр
+  errorElement.classList.add(object.errorClass); // Показываем сообщение об ошибке
 };
 
 // Удаляем класс с ошибкой
@@ -95,6 +95,10 @@ const setEventListeners = (object, formElement) => {
       //Вызываем toggleButtonState и передача ей массива полей и кнопки
       toggleButtonState(object, inputList, buttonElement);
     });
+  });
+  formElement.addEventListener('reset', () => { // собыите `reset` происходит когда вызывается `reset` у формы
+    setTimeout(() => {  // добавим таймаут, чтобы `toggleButtonState` вызвался уже после сохранения формы
+      toggleButtonState(object, inputList, buttonElement), 0 });
   });
 };
 
